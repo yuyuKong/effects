@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D旋转</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #efefef;
+        }
+        .small_pic_wrap {
+            height: 85px;
+            width: 110px;
+            display: block;
+            margin: 50px auto;
+            position: relative;
+            color: #fff;
+            font-family: STHeiti,Microsoft Yahei,微软雅黑,Arial,sans-serif;
+            perspective: 10000px;
+            transform-style: preserve-3d;
+            transition: transform .5s
+        }
+        .small_pic_wrap_long{
+            width: 160px;
+        }
+        .carousel_small_str{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #39c;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+        .img_txt_title{
+            line-height: 35px;
+        }
+        .img_p{
+            font-size: 15px;
+        }
+        .carousel_small_pic,
+        .carousel_small_str {
+            transition: all .5s
+        }
+        .carousel_small_str {
+            transform: translateZ(40px)
+        }
+
+        .carousel_small_pic{
+            transform: rotateX(-90deg) translateZ(42px)
+        }
+        .word_display {
+            transform: translateZ(0) rotateX(89deg)
+        }
+        .small_pic_wrap:hover{
+            transform: translateZ(0) rotateX(89deg)
+
+        }
+
+
+        .txt_bg03{
+            transform: rotateX(90deg) translateZ(42px)
+        }
+        .small_pic_wrap_long:hover{
+            transform: translateZ(0) rotateX(-89deg)
+
+        }
+    </style>
+</head>
+<body>
+<a href="#" class="small_pic_wrap" target="_blank">
+    <div class="carousel_small_str">
+        <h3 class="img_txt_title">404</h3>
+        <p class="img_p">路<br>在何方</p>
+    </div>
+    <img class="carousel_small_pic" width="110" height="85" src="https://www.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/02.1999dad7.jpg">
+</a>
+<a href="https://www.xuanfengge.com/good-night" class="small_pic_wrap  small_pic_wrap_long " target="_blank">
+    <div class="carousel_small_str">
+        <h3 class="img_txt_title">千里共良宵</h3>
+        <p class="img_p">岁月<br>在电波中流淌</p>
+    </div>
+    <img class="carousel_small_pic txt_bg03" src="https://www.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/04.106fc8c0.jpg" width="160" height="85">
+
+</a>
+</body>
+</html>
